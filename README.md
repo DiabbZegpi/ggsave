@@ -6,4 +6,16 @@ In the past, copying plots from RStudio Plots pane to some document was a pain i
 
 Here's what I mean
 
-![](https://github.com/DiabbZegpi/ggsave/blob/master/images/iris_default.png)
+```r
+ggsave(filename = "images/iris_default.png", plot = p,
+       height = 5, width = 7, units = "in", dpi = 500)
+```
+
+![](https://github.com/DiabbZegpi/ggsave/blob/master/images/iris_default.png "Default PNG engine")
+
+```r
+ggsave(filename = "images/iris_default.png", plot = q,
+       height = 5, width = 7, units = "in", dpi = 500, type = "cairo")
+```
+
+![](https://github.com/DiabbZegpi/ggsave/blob/master/images/iris_cairo.png "Cairo's engine")
